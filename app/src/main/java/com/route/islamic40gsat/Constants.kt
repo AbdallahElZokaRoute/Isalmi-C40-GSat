@@ -3,6 +3,8 @@ package com.route.islamic40gsat
 object Constants {
     const val EXTRA_CHAPTER_NAME = "chapter_name"
     const val EXTRA_CHAPTER_POSITION = "chapter_position"
+    const val EXTRA_QUOTE_TITLE = "quote_title"
+    const val EXTRA_QUOTE_DESC = "quote_desc"
     val chapters = listOf(
         "الفاتحه",
         "البقرة",

@@ -7,17 +7,22 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.route.islamic40gsat.R
+import com.route.islamic40gsat.databinding.ItemVerseBinding
 
 class VersesAdapter(val verses: List<String>?) : Adapter<VersesAdapter.VersesViewHolder>() {
 
-    class VersesViewHolder(val itemVerseView: View) : ViewHolder(itemVerseView) {
-        val content: TextView = itemVerseView.findViewById(R.id.content)
+    class VersesViewHolder(
+        val itemVerseView: ItemVerseBinding,
+    ) : ViewHolder(itemVerseView.root) {
+        fun bind(verse: String) {
+            itemVerseView.content.text = "$verse(${layoutPosition + 1})"
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): VersesViewHolder {
         val inflater = LayoutInflater.from(parent.context)
-        val view = inflater.inflate(R.layout.item_verse, parent, false)
-        return VersesViewHolder(view)
+        val binding = ItemVerseBinding.inflate(inflater, parent, false)
+        return VersesViewHolder(binding)
     }
 
     override fun getItemCount(): Int {
@@ -26,6 +31,6 @@ class VersesAdapter(val verses: List<String>?) : Adapter<VersesAdapter.VersesVie
 
     override fun onBindViewHolder(holder: VersesViewHolder, position: Int) {
         val item = verses?.get(position)!!
-        holder.content.text = item
+        holder.bind(item)
     }
 }

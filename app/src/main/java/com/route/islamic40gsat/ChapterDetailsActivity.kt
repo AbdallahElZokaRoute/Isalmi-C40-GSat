@@ -44,9 +44,15 @@ class ChapterDetailsActivity : AppCompatActivity() {
         val allFileContent = assets.open("$chapterPosition.txt")
             .bufferedReader()
             .readText()
-        val verses = allFileContent.split("\n")
+        val verses = allFileContent.trim().split("\n")
         adapter = VersesAdapter(verses)
         versesRecyclerView.adapter = adapter
     }
-
 }
+
+// Persistant Data Storage
+//
+val query = "SELET * FROM CUSTOMERS"
+
+// SQL Query
+

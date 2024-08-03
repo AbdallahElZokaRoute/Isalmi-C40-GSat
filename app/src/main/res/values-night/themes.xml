@@ -3,5 +3,38 @@
     <style name="Base.Theme.IslamiC40GSat" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/dark_blue</item>
+        <item name="colorPrimaryDark">@color/dark_blue_variant</item>
+        <item name="colorSecondary">@color/yellow</item>
+        <item name="android:statusBarColor">@color/dark_blue_variant</item>
+    </style>
+
+    <style name="DetailsScreenCardBackground">
+        <item name="android:background">@drawable/verses_background_dark</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="IslamicBackground">
+        <item name="android:background">@drawable/background_dark</item>
+    </style>
+
+    <style name="islami_bottom_navigation">
+        <item name="android:background">@color/dark_blue</item>
+        <item name="itemTextColor">@color/bottom_nav_selector_dark</item>
+        <item name="itemRippleColor">@color/transparent</item>
+        <item name="itemActiveIndicatorStyle">@null</item>
+        <item name="itemIconSize">40dp</item>
+        <item name="itemIconTint">@color/bottom_nav_selector_dark</item>
+    </style>
+
+    <style name="BackButton">
+        <item name="tint">@color/white</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:background">@color/yellow</item>
     </style>
 </resources>

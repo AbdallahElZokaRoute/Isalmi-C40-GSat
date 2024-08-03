@@ -4,7 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:background="@drawable/background">
+    tools:background="@drawable/background_dark">
+
+    <Button
+        android:id="@+id/switch_mode_button"
+        style="@style/TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Light Mode" />
 
     <ImageView
         android:id="@+id/quran_image"
@@ -20,13 +29,14 @@
 
     <View
         android:id="@+id/divider_1"
+        style="@style/DividerStyle"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/gold"
         app:layout_constraintTop_toBottomOf="@id/quran_image" />
 
     <TextView
         android:id="@+id/chapter_name_text"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
@@ -38,6 +48,7 @@
 
     <TextView
         android:id="@+id/chapter_position_text"
+        style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="8dp"
@@ -49,15 +60,15 @@
 
     <View
         android:id="@+id/divider_2"
+        style="@style/DividerStyle"
         android:layout_width="match_parent"
         android:layout_height="3dp"
-        android:background="@color/gold"
         app:layout_constraintTop_toBottomOf="@id/chapter_name_text" />
 
     <View
+        style="@style/DividerStyle"
         android:layout_width="3dp"
         android:layout_height="0dp"
-        android:background="@color/gold"
         app:layout_constraintEnd_toStartOf="@id/chapter_name_text"
         app:layout_constraintStart_toEndOf="@id/chapter_position_text"
         app:layout_constraintTop_toTopOf="@id/divider_1" />

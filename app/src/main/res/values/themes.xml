@@ -3,10 +3,7 @@
     <style name="Base.Theme.IslamiC40GSat" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
-        <item name="colorPrimary">@color/gold</item>  <!--Toolbars - BottomNavigation - Buttons -->
-        <item name="colorPrimaryDark">@color/gold</item>
-        <item name="colorSecondary">@color/gold</item>
-        <item name="android:statusBarColor">@color/goldVariant</item>
+
     </style>
 
     <style name="islami_bottom_navigation">
@@ -14,9 +11,34 @@
         <item name="itemTextColor">@color/bottom_nav_selector</item>
         <item name="itemRippleColor">@color/transparent</item>
         <item name="itemActiveIndicatorStyle">@null</item>
-        <item name="itemIconSize">32dp</item>
+        <item name="itemIconSize">40dp</item>
         <item name="itemIconTint">@color/bottom_nav_selector</item>
     </style>
 
-    <style name="Theme.IslamiC40GSat" parent="Base.Theme.IslamiC40GSat" />
+    <style name="Theme.IslamiC40GSat" parent="Base.Theme.IslamiC40GSat">
+        <item name="colorPrimary">@color/gold</item>  <!--Toolbars - BottomNavigation - Buttons -->
+        <item name="colorPrimaryDark">@color/gold</item>
+        <item name="colorSecondary">@color/gold</item>
+        <item name="android:statusBarColor">@color/goldVariant</item>
+    </style>
+
+    <style name="TextStyle">
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="IslamicBackground">
+        <item name="android:background">@drawable/background</item>
+    </style>
+
+    <style name="DetailsScreenCardBackground">
+        <item name="android:background">@drawable/verses_background</item>
+    </style>
+
+    <style name="BackButton">
+        <item name="tint">@color/black</item>
+    </style>
+
+    <style name="DividerStyle">
+        <item name="android:background">@color/gold</item>
+    </style>
 </resources>

@@ -6,10 +6,10 @@
     style="@style/IslamicBackground"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ChapterDetailsActivity">
+    tools:context=".activities.QuoteDetailsActivity">
 
     <TextView
-        android:id="@+id/title_toolbar"
+        android:id="@+id/toolbar_title"
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="سورة الفاتحة" />
+        tools:text="الحديث الأول" />
 
     <ImageView
         android:id="@+id/icon_back"
@@ -27,25 +27,23 @@
         android:layout_height="wrap_content"
         android:padding="12dp"
         android:src="@drawable/ic_back"
-        app:layout_constraintBottom_toBottomOf="@id/title_toolbar"
-        app:layout_constraintEnd_toStartOf="@id/title_toolbar"
-        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="@id/toolbar_title"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/title_toolbar" />
+        app:layout_constraintTop_toTopOf="@id/toolbar_title" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/verses_recycler_view"
+        android:id="@+id/quote_description_recycler_view"
         style="@style/DetailsScreenCardBackground"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        android:padding="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_percent="0.8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title_toolbar"
-        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_title"
+        app:layout_constraintWidth_percent="0.85"
         tools:listitem="@layout/item_verse" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
