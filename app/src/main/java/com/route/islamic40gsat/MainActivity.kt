@@ -1,15 +1,47 @@
 package com.route.islamic40gsat
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.android.material.navigation.NavigationBarView.OnItemSelectedListener
+import com.google.android.material.navigation.NavigationView.OnNavigationItemSelectedListener
+import com.route.islamic40gsat.fragments.HadethFragment
+import com.route.islamic40gsat.fragments.QuranFragment
+import com.route.islamic40gsat.fragments.RadioFragment
+import com.route.islamic40gsat.fragments.TasbeehFragment
 
 class MainActivity : AppCompatActivity() {
+    lateinit var bottomNavigationView: BottomNavigationView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        initViews()
+    }
+
+    private fun initViews() {
+        bottomNavigationView = findViewById(R.id.islami_bottom_navigation_view)
+        bottomNavigationView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.navigation_quran -> pushFragment(QuranFragment())
+                R.id.navigation_hadeth -> pushFragment(HadethFragment())
+                R.id.navigation_sebha -> pushFragment(TasbeehFragment())
+                R.id.navigation_radio -> pushFragment(RadioFragment())
+            }
+            return@setOnItemSelectedListener true
+        }
+        bottomNavigationView.selectedItemId = R.id.navigation_quran
+    }
+
+    private fun pushFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.islami_fragment_container, fragment)
+            .commit()
+
     }
     // Testing Access Tokens
     // Git & Github (Version Control Systems) (VCS)
