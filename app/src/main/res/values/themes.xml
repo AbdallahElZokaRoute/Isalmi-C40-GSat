@@ -9,6 +9,10 @@
         <item name="android:statusBarColor">@color/goldVariant</item>
     </style>
 
+    <style name="IslamicBackground">
+        <item name="android:background">@drawable/background</item>
+    </style>
+
     <style name="islami_bottom_navigation">
         <item name="android:background">@color/gold</item>
         <item name="itemTextColor">@color/bottom_nav_selector</item>
@@ -16,6 +20,7 @@
         <item name="itemActiveIndicatorStyle">@null</item>
         <item name="itemIconSize">32dp</item>
         <item name="itemIconTint">@color/bottom_nav_selector</item>
+
     </style>
 
     <style name="body_sebha">

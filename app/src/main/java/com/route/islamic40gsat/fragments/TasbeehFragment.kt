@@ -1,6 +1,7 @@
 package com.route.islamic40gsat.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,6 +11,7 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.fragment.app.Fragment
 import com.route.islamic40gsat.R
 import com.route.islamic40gsat.databinding.FragmentTasbeehBinding
@@ -34,6 +36,7 @@ class TasbeehFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         resetFields()
+        changeMood()
         binding.sebhaBtn.setOnClickListener{
             if (i >= buttonText.size) i = 0
             btnClickCount++
@@ -47,6 +50,26 @@ class TasbeehFragment : Fragment() {
             }
         }
 
+    }
+
+    private fun changeMood(){
+        if (isLight())
+            binding.changeMoodBtn.text = "Dark Mode"
+        else
+            binding.changeMoodBtn.text = "Light Mode"
+
+        binding.changeMoodBtn.setOnClickListener {
+            if (isLight()) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
+    }
+
+    fun isLight(): Boolean {
+        return AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_NO ||
+                AppCompatDelegate.getDefaultNightMode() == AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM
     }
 
     private fun resetFields(){
