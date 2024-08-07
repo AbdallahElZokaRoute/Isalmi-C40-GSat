@@ -2,4 +2,14 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <!--Developer 1 finished Feature 1 -->
+    <color name="color_black">#000000</color>
+    <!-- Developer 2 Finished Task 2 -->
+    <color name="color_white">#FFFFFF</color>
+    <color name="gold">#B7935F</color>
+    <color name="goldVariant">#907246</color>
+    <color name="grey">#242424</color>
+    <color name="white2">#CCF8F8F8</color>
+    <color name="counter_brown">#B7935F</color>
 </resources>
