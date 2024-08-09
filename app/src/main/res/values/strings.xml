@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">IslamiC40GSat</string>
+    <string name="islami">Islami</string>
+    <string name="quran">Quran</string>
+    <string name="hadeth">Hadeth</string>
+    <string name="tasbeeh">Tasbeeh</string>
+    <string name="radio">Radio</string>
+    <string name="numberOfDhikr">عدد التسبيحات</string>
+    <string name="image">image</string>
+
+    <array name="azkarList">
+        <item>سبحان الله</item>
+        <item>الحمد لله</item>
+        <item>لا الله الا الله</item>
+        <item>الله اكبر</item>
+    </array>
 </resources>
